@@ -3,24 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RecipeBud – Hämta appen</title>
+<title>RecipeBud – Sluta gissa, börja nå dina mål</title>
+<meta name="description" content="Räkna kalorier och makros, planera veckans måltider och importera recept – allt i en app. Ladda ner RecipeBud gratis.">
 <meta property="og:title" content="RecipeBud – Recept, måltidsplan & kalorier">
-<meta property="og:description" content="Planera måltider, räkna kalorier och makros, och nå dina mål. Ladda ner RecipeBud gratis.">
-<meta http-equiv="refresh" content="0; url=https://apps.apple.com/app/id6744579287">
-<script>window.location.replace("https://apps.apple.com/app/id6744579287");</script>
+<meta property="og:description" content="Fixa de 3 vanligaste misstagen som stoppar din viktminskning. Ladda ner RecipeBud gratis.">
 <style>
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0d1117;color:#fff;
-       display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;padding:24px}
-  .dot{width:14px;height:14px;border-radius:50%;background:#5BC8BE;margin-bottom:20px}
-  h1{font-size:24px;margin:0 0 12px}p{color:rgba(255,255,255,.6);margin:0 0 28px}
-  a{background:linear-gradient(135deg,#5BC8BE,#3aa8a0);color:#fff;text-decoration:none;font-weight:700;
-    padding:16px 36px;border-radius:100px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--mint:#5BC8BE;--mint2:#3aa8a0;--coral:#E8827A;--ink:#0d1117}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif;background:var(--ink);color:#fff;-webkit-font-smoothing:antialiased}
+
+  .bar{display:flex;align-items:center;gap:10px;padding:18px 22px}
+  .bar .logo{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--coral),#f0a39b);display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:17px}
+  .bar .name{font-weight:800;font-size:19px;letter-spacing:.3px}
+
+  .hero{min-height:calc(100vh - 66px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px 24px 40px;
+        background:radial-gradient(ellipse at 50% 0%,rgba(91,200,190,.16) 0%,transparent 60%)}
+  .pill{display:inline-flex;align-items:center;gap:7px;background:rgba(232,130,122,.14);border:1px solid rgba(232,130,122,.4);color:var(--coral);
+        border-radius:100px;padding:7px 16px;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px}
+  h1{font-size:clamp(30px,7vw,46px);font-weight:900;line-height:1.08;max-width:620px;margin-bottom:18px}
+  h1 em{font-style:normal;color:var(--mint)}
+  .sub{font-size:clamp(16px,4vw,19px);color:rgba(255,255,255,.62);max-width:480px;line-height:1.55;margin-bottom:34px}
+
+  .store{display:inline-flex;align-items:center;gap:13px;background:#fff;color:#000;text-decoration:none;
+         padding:15px 30px;border-radius:15px;box-shadow:0 14px 40px rgba(0,0,0,.45);transition:transform .15s}
+  .store:active{transform:scale(.97)}
+  .store svg{width:30px;height:30px}
+  .store .t{text-align:left;line-height:1.1}
+  .store .t small{display:block;font-size:11px;font-weight:600;opacity:.7}
+  .store .t b{font-size:21px;font-weight:700}
+  .meta{margin-top:16px;font-size:13px;color:rgba(255,255,255,.4)}
+
+  .phone{margin-top:38px;width:clamp(150px,42vw,190px);border-radius:30px;border:5px solid rgba(255,255,255,.1);
+         box-shadow:0 30px 80px rgba(0,0,0,.5)}
+
+  .why{padding:56px 24px;max-width:560px;margin:0 auto}
+  .why h2{font-size:26px;font-weight:900;text-align:center;margin-bottom:8px}
+  .why .lead{text-align:center;color:rgba(255,255,255,.55);margin-bottom:34px;font-size:16px}
+  .row{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .row .ic{width:42px;height:42px;border-radius:12px;background:rgba(91,200,190,.15);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+  .row h3{font-size:17px;font-weight:700;margin-bottom:4px}
+  .row p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.5}
+
+  .price{text-align:center;background:rgba(91,200,190,.08);border:1px solid rgba(91,200,190,.2);border-radius:18px;padding:26px;margin:10px 24px 0}
+  .price b{color:var(--mint);font-size:30px;font-weight:900}
+  .price span{display:block;color:rgba(255,255,255,.55);margin-top:4px;font-size:15px}
+
+  .foot{text-align:center;padding:54px 24px 70px}
+  .foot h2{font-size:24px;font-weight:900;margin-bottom:22px}
+  .foot .meta{margin-top:14px}
+  .copyright{text-align:center;color:rgba(255,255,255,.25);font-size:12px;padding-bottom:30px}
 </style>
 </head>
 <body>
-  <div class="dot"></div>
-  <h1>Tar dig till RecipeBud…</h1>
-  <p>Du skickas vidare till App Store.</p>
-  <a href="https://apps.apple.com/app/id6744579287">Öppna i App Store →</a>
+  <div class="bar"><div class="logo">R</div><div class="name">RecipeBud</div></div>
+
+  <section class="hero">
+    <div class="pill">⚠ Fettförbränning</div>
+    <h1>Sluta gissa.<br>Börja <em>nå dina mål</em>.</h1>
+    <p class="sub">Räkna kalorier &amp; makros, planera veckans måltider och importera recept — allt i en app.</p>
+
+    <a class="store" href="https://apps.apple.com/app/id6744579287">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.28-1.27 3.13-2.53.98-1.45 1.39-2.85 1.41-2.93-.03-.01-2.7-1.04-2.73-4.12M14.6 4.5c.72-.87 1.2-2.08 1.07-3.28-1.03.04-2.28.69-3.02 1.55-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+      <span class="t"><small>Ladda ner på</small><b>App Store</b></span>
+    </a>
+    <div class="meta">Gratis · iPhone · iOS 17+</div>
+
+    <img class="phone" src="https://raw.githubusercontent.com/howudoin123/recipebud-ad-creatives/main/slide-5.png" alt="RecipeBud app">
+  </section>
+
+  <section class="why">
+    <h2>Fixa de 3 vanligaste misstagen</h2>
+    <p class="lead">De som lyckas gissar inte — de mäter, planerar och äter rätt.</p>
+    <div class="row"><div class="ic">📊</div><div><h3>Sluta gissa portionerna</h3><p>Se kalorier och makros automatiskt för varje recept — inga fler 300–500 kcal du missade.</p></div></div>
+    <div class="row"><div class="ic">📅</div><div><h3>Planera veckan på 2 minuter</h3><p>En plan gör att du äter rätt även på fredagskvällen — inte bara det som är enklast.</p></div></div>
+    <div class="row"><div class="ic">💪</div><div><h3>Få i dig rätt protein</h3><p>Håll dig mätt och behåll musklerna med recept som faktiskt når dina proteinmål.</p></div></div>
+  </section>
+
+  <div class="price"><b>från 38 kr</b><span>per portion — billigare än du tror</span></div>
+
+  <section class="foot">
+    <h2>Redo att börja?</h2>
+    <a class="store" href="https://apps.apple.com/app/id6744579287">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.28-1.27 3.13-2.53.98-1.45 1.39-2.85 1.41-2.93-.03-.01-2.7-1.04-2.73-4.12M14.6 4.5c.72-.87 1.2-2.08 1.07-3.28-1.03.04-2.28.69-3.02 1.55-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.58 3.03-1.45"/></svg>
+      <span class="t"><small>Ladda ner på</small><b>App Store</b></span>
+    </a>
+    <div class="meta">Gratis · iPhone · iOS 17+</div>
+  </section>
+
+  <div class="copyright">© RecipeBud</div>
 </body>
 </html>
